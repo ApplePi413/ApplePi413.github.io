@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pi time</title>
+    </head>
+    <body>
+        <div id="clockDisplay"></div>
+        <script type="text/javascript">
+            var time = 0;
+            function showTime(){
+                var date = new Date();
+                var hr = date.getHours();
+                var min = date.getMinutes();
+                var sec = date.getSeconds();
+                // Make it not 24 hour time:
+                if (hr == 0){
+                    hr = 12;
+                }
+                if (hr > 12){
+                    hr -= 12;
+                }
+                time = hr + ":" + min + ":" + sec
+                document.getElementById("clockDisplay").innerText = time;
+                document.getElementById("clockDisplay").textContent = time;
+            }
+            function checkIfPi(){
+                if (time == "3:14:0"){
+                    document.getElementById('piTimeText').style.display='block';
+                } else if(time == "3:15:0"){
+                    document.getElementById('piTimeText').style.display='none';
+                }
+            }
+            showTime();
+            setInterval(showTime, 100);
+            setInterval(checkIfPi, 100);
+        </script>
+        <div id="piTime">
+            <h1 id="piTimeText" style="display:none">Pi time!</h1>
+        </div>
+    </body>
+</html>
