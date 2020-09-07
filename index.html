@@ -9,11 +9,14 @@
         <div id="clockDisplay"></div>
         <script type="text/javascript">
             var time = 0;
+            var hr = 0;
+            var min = 0;
+            var sec = 0;
             function showTime(){
                 var date = new Date();
-                var hr = date.getHours();
-                var min = date.getMinutes();
-                var sec = date.getSeconds();
+                hr = date.getHours();
+                min = date.getMinutes();
+                sec = date.getSeconds();
                 // Make it not 24 hour time:
                 if (hr == 0){
                     hr = 12;
@@ -26,9 +29,9 @@
                 document.getElementById("clockDisplay").textContent = time;
             }
             function checkIfPi(){
-                if (time == "3:14:0"){
+                if (hr == 3 && min == 14){
                     document.getElementById('piTimeText').style.display='block';
-                } else if(time == "3:15:0"){
+                } else {
                     document.getElementById('piTimeText').style.display='none';
                 }
             }
