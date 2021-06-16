@@ -1,0 +1,147 @@
+h1 {
+    color: darkgreen;
+    font-size: 100px;
+    font-weight: bold;
+    font-family: cursive;
+    text-align: center;
+}
+
+h2 {
+    color: darkblue;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+}
+
+h3 {
+    color: black;
+    font-size: large;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 5px 0;
+    background-color: black;
+    font-size: 15px;
+    font-weight: 900;
+    text-align: center;
+    word-spacing: 100px;
+}
+  
+.header li {
+    display: inline-block;
+    padding: 5px;
+}
+  
+.header a {
+    color: white;
+}
+
+.websiteTitle {
+    color: white;
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    padding-bottom: 25px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+  #clockDisplay {
+    color: purple;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+#piTimeText {
+color: #7e57c2;
+font-size: 100px;
+font-family: sans-serif;
+text-transform: uppercase;
+text-shadow: -4px 4px #2196f3,
+             -8px 8px #43a047,
+             -12px 12px #eeff41,
+             -16px 16px #f9a825,
+              -20px 20px #ff5722;
+font-weight: bold;
+text-align: center;
+}
+
+.spacePicturesTitle {
+    margin-top: 100px;
+}
+
+.spacePictures {
+    text-align: center;
+    background-color: black;
+}
+
+.mercuryPicture {
+    width: 25%;
+    height: 25%;
+    text-align: left;
+}
+
+.venusPicture {
+    width: 25%;
+    height: 25%;
+    text-align: center;
+}
+
+.earthPicture {
+    width: 25%;
+    height: 25%;
+    text-align: right;
+}
+
+.marsPicture {
+    width: 25%;
+    height: 25%;
+    text-align: left;
+    padding-bottom: 7%;
+}
+
+.jupiterPicture {
+    width: 25%;
+    height: 25%;
+    text-align: center;
+}
+
+.saturnPicture {
+    width: 25%;
+    height: 25%;
+    text-align: right;
+}
+
+.uranusPicture {
+    width: 25%;
+    height: 25%;
+    text-align: left;
+}
+
+.neptunePicture {
+    width: 25%;
+    height: 25%;
+    text-align: center;
+}
+
+.galaxyPicture {
+    width: 25%;
+    height: 25%;
+    text-align: right;
+}
+
+.aboutPicture {
+    text-align: center;
+}
+
+.mePicture {
+    width: 20%;
+    height: 20%;
+}
