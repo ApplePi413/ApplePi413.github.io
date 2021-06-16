@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pi time</title>
+        <title>My Website</title>
+        <link href='style.css' rel='stylesheet'>
     </head>
+
     <body>
+
+        <nav class='header'>
+            <ul>
+                <li><a class='home' href='#top'>HOME</a></li>
+                <li><a class='pagelink' href='#clockTitle'>TIME</a></li>
+                <li><a class='pagelink' href='#pictures'>PICTURES</a></li>
+                <li><a class='pagelink' href='#about'>ABOUT</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <h1 class="websiteTitle">
+                My Website :)
+            </h1>
+        </div>
+
+        <h2 id='clockTitle'>
+            Time:
+        </h2>
         <div id="clockDisplay"></div>
         <script type="text/javascript">
             var time = 0;
@@ -17,12 +39,19 @@
                 hr = date.getHours();
                 min = date.getMinutes();
                 sec = date.getSeconds();
-                // Make it not 24 hour time:
+                // Make clock not 24 hour time:
                 if (hr == 0){
                     hr = 12;
                 }
                 if (hr > 12){
                     hr -= 12;
+                }
+                // Add zero in front of seconds and minutes if they are a single digit:
+                if (min < 10){
+                    min = "0" + min;
+                }
+                if (sec < 10){
+                    sec = "0" + sec;
                 }
                 time = hr + ":" + min + ":" + sec
                 document.getElementById("clockDisplay").innerText = time;
@@ -40,7 +69,58 @@
             setInterval(checkIfPi, 100);
         </script>
         <div id="piTime">
-            <h1 id="piTimeText" style="display:none">Pi time!</h1>
+            <h1 id="piTimeText">Pi time!</h1>
         </div>
+
+        <div id="pictures">
+            <h2 class="spacePicturesTitle">
+                Cool pictures of space stuff:
+            </h2>
+            <div class="spacePictures">
+                <div class='topPictures'>
+                    <img src='https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/images/531904main_MESSENGEROrbitImage_full.jpg'
+                    class='mercuryPicture'>
+                    <img src='https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia00271.jpg'
+                    class='venusPicture'>
+                    <img src='https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/city_lights_namerica_8k.jpg'
+                    class='earthPicture'>
+                </div>
+                <div class='middlePictures'>
+                    <img src='https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia24543-1-16.jpg'
+                    class='marsPicture'>
+                    <img src='https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/images/201781main_PIA10102.jpg'
+                    class='jupiterPicture'>
+                    <img src='https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia01969-saturn-voyager1.png'
+                    class='saturnPicture'>
+                </div>
+                <div class='bottomPictures'>
+                    <img src='https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia18182-uranus-voyager1.png'
+                    class='uranusPicture'>
+                    <img src='https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/1989_august_voyager_2_neptune.jpg'
+                    class='neptunePicture'>
+                    <img src='https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/potw2121a.jpg'
+                    class='galaxyPicture'>
+                </div>
+            </div>
+            <p class="legalText"> Space photos obtained from NASA because they are <a href='https://www.nasa.gov/multimedia/guidelines/index.html'>free</a>, you can click <a href='https://www.nasa.gov/multimedia/imagegallery/index.html'>here</a> to view more cool photos on their website. 
+                This website is not affiliated with or endorsed by NASA.</p>
+        </div>
+
+        <div id="about">
+            <h2 class='aboutTitle'>
+                About:
+            </h2>
+            <div class="aboutPicture">
+                <h3 class='mePictureTitle'>
+                    Me:
+                </h3>
+                <img src='About me picture.png'
+                class='mePicture'>
+            </div>
+            <p class='aboutText'>I made this website to practice HTML and CSS. Now I can say that I have made a website. Yay. 
+                Thanks for visiting, and make sure to check back at pi time!</p>
+        </div>
+
     </body>
+
 </html>
